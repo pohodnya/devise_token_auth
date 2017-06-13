@@ -104,7 +104,7 @@ module DeviseTokenAuth::Concerns::User
 
     def database_exists?
       ::ActiveRecord::Base.connection
-    rescue ActiveRecord::NoDatabaseError
+    rescue ::ActiveRecord::NoDatabaseError
       false
     else
       true
